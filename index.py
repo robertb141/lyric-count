@@ -478,4 +478,5 @@ def song_full_word_count_function(album_name_passed_in_from_html):
 #=============================================================================================================================== MAIN PROGRAM RUN
 # Run the main program
 if __name__ == "__main__":
-    app.run(debug = True)
+    port = int(os.environ.get('PORT', 33507))
+    app.run(debug = True, port = port)
