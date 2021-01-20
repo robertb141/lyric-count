@@ -4,6 +4,5 @@ boto3
 botocore
 spotipy
 lyricsgenius
-difflib
 re
 unidecode
