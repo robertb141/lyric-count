@@ -1,0 +1,14 @@
+flask
+datetime
+json
+itertools
+os
+logging
+boto3
+botocore
+spotipy
+lyricsgenius
+difflib
+sys
+re
+unidecode
