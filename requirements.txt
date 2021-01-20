@@ -4,5 +4,4 @@ boto3
 botocore
 spotipy
 lyricsgenius
-re
 unidecode
