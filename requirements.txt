@@ -1,6 +1,5 @@
 flask
 datetime
-logging
 boto3
 botocore
 spotipy
