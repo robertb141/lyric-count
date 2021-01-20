@@ -1,0 +1,24 @@
+{% extends "blueprint_page.html" %}
+{% block content %}
+<div class="artist_and_albums_analysis_section">
+    <div class="one_album_section">
+        <img src="{{ image_links_arr_to_html[1]['url'] }}" alt="Album cover photo: Pulled from Spotify">
+        <div class="album_basics">
+            <p>Artist:  <strong>{{ artist_name_official_master_dict_to_html }}</strong></p>
+            <p>Album: <strong>{{ album_name_to_html }}</strong></p>
+            <p>Released:    <strong>{{ album_release_date_to_html }}</strong></p>
+            <p>Track Name:    <strong>{{ results_one_song_analysis_to_html[0][1] }}</strong></p>
+        </div>
+        <div class="album_word_counts">
+            <p>Total Word Count:    <strong>{{ results_one_song_analysis_to_html[2][1] }}</strong></p>
+            <p>Total Word Count (Unique):    <strong>{{ results_one_song_analysis_to_html[3][1] }}</strong></p>
+        </div>
+        <div class="album_word_counts_top_dict">
+            <p>All Word Counts</p>
+            {% for word in results_one_song_analysis_to_html[1][1] %}
+                <p>{{ word }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

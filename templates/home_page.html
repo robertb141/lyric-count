@@ -1,0 +1,15 @@
+{% extends "blueprint_page.html" %}
+{% block content %}
+    <div class="user_input_artist_name_div">
+        <form action="#" method="POST">
+            <label for="artist_name_html_form_to_python">Artist Name: </label>
+            <input type="text" id="artist_name_html_form_to_python" name="artist_name_html_form_to_python">
+            <br>
+            <div class="submit_button">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <br><br>
+        <p>Note: If the artist name has never been <br>searched on this website before, then the <br>wait time may be a few minutes.</p>
+    </div>
+{% endblock %}

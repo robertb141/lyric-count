@@ -1,0 +1,25 @@
+{% extends "blueprint_page.html" %}
+{% block content %}
+<div class="artist_and_albums_analysis_section">
+    <div class="artist_overall_analysis">
+        {% if all_selected_albums_artist_level_analysis_to_html[5][1] > 1 %}
+            <img src="{{ artist_images_to_html[1]['url'] }}" alt="Artist photo: Pulled from Spotify">
+            <div class="album_basics">
+                <p>Artist:  <strong>{{ artist_name_official_master_dict_to_html }}</strong></p>
+                <p>Albums Selected: <strong>{{ all_selected_albums_artist_level_analysis_to_html[5][1] }}</strong></p>
+                <p>Total Tracks:    <strong>{{ all_selected_albums_artist_level_analysis_to_html[0][1] }}</strong></p>
+            </div>
+            <div class="album_word_counts">
+                <p>Total Word Count:    <strong>{{ all_selected_albums_artist_level_analysis_to_html[3][1] }}</strong></p>
+                <p>Total Word Count (Unique):    <strong>{{ all_selected_albums_artist_level_analysis_to_html[4][1] }}</strong></p>
+            </div>
+            <div class="album_word_counts_top_dict">
+                <p><strong>All Word Counts</strong></p>
+                {% for k, v in all_selected_albums_artist_level_analysis_to_html[2][1].items() %}
+                    <p>{{ '[{}, {}]'.format(k, v) }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

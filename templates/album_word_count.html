@@ -1,0 +1,34 @@
+{% extends "blueprint_page.html" %}
+{% block content %}
+    <div class="artist_and_albums_analysis_section">
+        {% for i in all_selected_albums_album_level_analysis_to_html %}
+            <div class="one_album_section">
+                <img src="{{ i[1][1][1]['url'] }}" alt="Album cover photo: Pulled from Spotify">
+                <div class="album_basics">
+                    <p>Artist:  <strong>{{ artist_name_official_master_dict_to_html }}</strong></p>
+                    <p>Album:   <strong>{{ i[0][1] }}</strong></p>
+                    <p>Released:    <strong>{{ i[3][1] }}</strong></p>
+                    <p>Tracks:    <strong>{{ i[2][1] }}</strong></p>
+                </div>
+                <div class="album_word_counts">
+                    <p>Total Word Count:    <strong>{{ i[6][1] }}</strong></p>
+                    <p>Total Word Count (Unique):    <strong>{{ i[7][1] }}</strong></p>
+                </div>
+                <div class="album_word_counts_top_dict">
+                    <form action="{{ url_for('album_full_word_count_function') }}" method="POST">
+                        <div class="album_more_links">
+                            <button type="submit" name="selected_album_artist_name_to_see_full_word_count_dict_from_html" value="rj~{{ i[0][1] }}">See album's song lyric analysis</button>
+                        </div>
+                    </form>
+                    <p><strong>All Word Counts</strong></p>
+                    {% for word_count in i[5][1] %}
+                        <p>{{ word_count }}</p>
+                    {% endfor %}
+                </div>
+                <div class="album_more_links">
+                    <p>See song lyric analysis</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

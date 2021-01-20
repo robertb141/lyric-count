@@ -1,0 +1,29 @@
+{% extends "blueprint_page.html" %}
+{% block content %}
+    <div class="album_selection">
+        <h1>Filter By Album</h1>
+        <br>
+        <form action="{{ url_for('analysis_albums_selected_page_redirect_function') }}" method="POST">
+            <div class="checkbox_select_all">
+                <p><input type="checkbox" name="album_names_selected_html_form_to_python" value="Select_All_Albums"> Select All Albums</p>
+                <div class="submit_button">
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+            <br>
+            <div class="album_info_container">
+                {% for i in album_information_tuple_arr_to_html %}
+                    <div class="album_info_cell">
+                        <img src="{{ i[2][2]['url'] }}" alt="Album Image (Pulled from Spotify)">
+                        <p>{{ i[0] }}</p>
+                        <p>{{ 'Tracks: {}'.format(i[1]) }}</p>
+                        <input type="checkbox" name="album_names_selected_html_form_to_python" value="{{ i[0] }}">
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="submit_button">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,189 @@
+/* ------------------------------ Default Section (All Pages) */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* ------------------------------ Blueprint page */
+header {
+    background-color: rgb(135, 70, 255);
+    height: 50px;
+    width: 100%;
+    display: block;
+    position: fixed;
+}
+
+.inner_header {
+    background-color: rgb(135, 70, 255);
+    height: 100%;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container {
+    display: table;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    float: left;
+}
+
+.logo_container h1 {
+    color: white;
+    display: table;
+    font-size: 32px;
+}
+
+.navigation {
+    display: table;
+    float: right;
+    position: relative;
+    top: 25%;
+    right: 5%;
+}
+
+.navigation a {
+    display: table;
+    float: left;
+    padding: 0px 7.5px;
+}
+
+.navigation a li{
+    color: white;
+    display: table;
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(50, 0, 100);
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+ }
+
+main {
+    padding-top: 50px;
+}
+
+.inner_main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ------------------------------ Home Page */
+.user_input_artist_name_div {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.user_input_artist_name_div label {
+    color: white;
+}
+
+.user_input_artist_name_div p {
+    color: rgb(200, 200, 200);
+}
+
+.submit_button {
+    padding-top: 2%;
+}
+
+/* ------------------------------ Contact Page */
+.contact_outer_section {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+    color: rgb(200, 200, 200);
+}
+
+.contact_outer_section h1 {
+    text-align: center;
+}
+
+.about_data_section_outer {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.about_data_section_inner p {
+    margin-top: 2%;
+}
+
+/* ------------------------------ Artist Page */
+.album_selection {
+}
+
+.album_selection h1 {
+    margin-top: 2%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.checkbox_select_all {
+    text-align: center;
+    color: white;
+}
+
+.album_info_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    grid-auto-rows: minmax(10px, auto);
+    color: rgb(200, 200, 200);
+}
+
+.album_info_cell {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------ Analysis Page */
+.artist_and_albums_analysis_section {
+    color: rgb(200, 200, 200);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.artist_overall_analysis {
+    margin-top: 20px;
+}
+
+button, .submit_button input {
+    height: 25px;
+    width: 100%;
+    background-color: rgb(135, 70, 255);
+    color: rgb(200, 200, 200);
+    border: none;
+    cursor: pointer;
+    margin-bottom: 3%;  
+}
+
+button:hover {
+    color: white;
+    border: white 2px solid;
+}
+
+.submit_button input:hover {
+    color: white;
+    border: white 2px solid;
+}
+
+.one_album_section {
+    margin-top: 20px;
+}
+
+.one_album_section input {
+    opacity: 0;
+}
+
+.album_basics, .album_lyric_percentages, .album_word_counts, .album_word_counts_top_dict, .album_more_links {
+    margin-bottom: 10px;
+}
